@@ -104,7 +104,10 @@ function CountrySingle({ country }) {
               <div className={classes.details_panel_borders_containers}>
                 {borders &&
                   borders.map((x) => (
-                    <div className={classes.details_panels_borders_country}>
+                    <div
+                      key={x[0].name}
+                      className={classes.details_panels_borders_country}
+                    >
                       <img src={x[0].flags.png} alt={x[0].name.common} />
                       <div className={classes.details_panels_borders_name}>
                         {x[0].name.common}
