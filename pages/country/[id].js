@@ -73,27 +73,30 @@ function CountrySingle({ country }) {
             <div className={classes.details_panel_row}>
               <div className={classes.details_panel_label}>Languages</div>
               <div className={classes.details_panel_value}>
-                {Object.values(country[0].languages)
-                  .map((name) => name)
-                  .join(", ")}
+                {country[0].languages &&
+                  Object.values(country[0].languages)
+                    .map((name) => name)
+                    .join(", ")}
               </div>
             </div>
 
             <div className={classes.details_panel_row}>
               <div className={classes.details_panel_label}>Currencies</div>
               <div className={classes.details_panel_value}>
-                {Object.values(country[0].currencies)
-                  .map((x) => x.name)
-                  .join(", ")}
+                {country[0].currencies &&
+                  Object.values(country[0].currencies)
+                    .map((x) => x.name)
+                    .join(", ")}
               </div>
             </div>
 
             <div className={classes.details_panel_row}>
               <div className={classes.details_panel_label}>Native Name</div>
               <div className={classes.details_panel_value}>
-                {Object.values(country[0].name.nativeName)
-                  .map((x) => x.official)
-                  .join(", ")}
+                {country[0].name.nativeName &&
+                  Object.values(country[0].name.nativeName)
+                    .map((x) => x.official)
+                    .join(", ")}
               </div>
             </div>
 
