@@ -14,9 +14,11 @@ function CountrySingle({ country }) {
 
   const [borders, setBorders] = useState([]);
   const getBorders = async () => {
-    const borders = await Promise.all(
-      country[0].borders.map((border) => getCountry(border))
-    );
+    const borders =
+      country[0].borders &&
+      (await Promise.all(
+        country[0].borders.map((border) => getCountry(border))
+      ));
     setBorders(borders);
   };
 
