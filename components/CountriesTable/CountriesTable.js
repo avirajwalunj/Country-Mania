@@ -1,5 +1,5 @@
 import classes from "./CountriesTable.module.css";
-import Link from "next/Link";
+import Link from "next/link";
 import {
   KeyboardArrowDownRounded,
   KeyboardArrowUpRounded,
